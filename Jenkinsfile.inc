@@ -1,11 +1,11 @@
 pipeline {
 	agent any
 	stages {
-		stage('Checkout SCM') {
+		<!-- stage('Checkout SCM') {
 			steps {
 				git '/3103/3103Lab'
 			}
-		}
+		} -->
 		stage('Build') {
 				steps {
 						sh 'composer install'
