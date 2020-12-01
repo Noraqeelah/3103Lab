@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Checkout SCM') {
 			steps {
-				git '/Users/noraqilah/Documents/Github/3103/3103Lab'
+				git '/3103Lab'
 			}
 		}
 
@@ -16,7 +16,7 @@ pipeline {
 	post {
 		success {
 			dependencyCheckPublisher pattern: 'dependency-check-report.xml'
-			sh "sudo rm -R /var/localhost:8080/* /var/localhost:8080/.* || true"
+			sh "sudo rm -R /var/127.0.0.1:8080/* /var/127.0.0.1:8080/.* || true"
 		}
 	}
 }
