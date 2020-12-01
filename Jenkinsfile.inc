@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Checkout SCM') {
 			steps {
-				git '/Users/noraqilah/Documents/Github/3103/3103Lab'
+				<!-- git '/Users/noraqilah/Documents/Github/3103/3103Lab' -->
 				git branch: 'main', credentialsId: 'Noraqeelah', url: 'ssh://git@github.com:Noraqeelah/3103Lab.git'
 
 			}
