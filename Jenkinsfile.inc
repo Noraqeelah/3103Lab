@@ -3,8 +3,9 @@ pipeline {
 	stages {
 		stage('Checkout SCM') {
 			steps {
-		
-				git branch: 'main', credentialsId: 'Noraqeelah', url: 'ssh://git@github.com:Noraqeelah/3103Lab.git'
+
+				cleanWs()
+				checkout scm
 
 			}
 		}
